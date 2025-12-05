@@ -1,0 +1,57 @@
+{
+  "name": "jlma-cfes",
+  "version": "1.0.0",
+  "description": "JLMA Claude Flow Enhancement System - Unified performance enhancement layer for claude-flow",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "jlma-cfes": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "npm test -- --watch",
+    "benchmark": "node tests/benchmark.js",
+    "validate": "node bin/cli.js check",
+    "setup": "node scripts/setup.js",
+    "cleanup": "node scripts/cleanup.js",
+    "example": "node examples/basic-usage.js",
+    "example:advanced": "node examples/advanced-features.js",
+    "example:claude-flow": "node examples/claude-flow-integration.js",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "claude-flow",
+    "claude-code",
+    "enhancement",
+    "performance",
+    "validation",
+    "hooks",
+    "mcp",
+    "ai-assistant"
+  ],
+  "author": "JLMA Enhancement Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "claude-flow": ">=2.0.0"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.5.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "config/",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlma/jlma-cfes"
+  }
+}

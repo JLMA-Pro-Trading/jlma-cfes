@@ -1,0 +1,44 @@
+{
+  "jlma-cfes": {
+    "version": "3.0.0",
+    "features": {
+      "enableHooks": true,
+      "enableValidation": true,
+      "enableMonitoring": true,
+      "claudeFlowIntegration": true
+    },
+    "performance": {
+      "preToolUseThreshold": 1.0,
+      "postToolUseThreshold": 5.0,
+      "operationTimeout": 30000
+    },
+    "validation": {
+      "enableSecurityChecks": true,
+      "enablePerformanceChecks": true,
+      "enableQualityChecks": true,
+      "strictMode": false
+    },
+    "hooks": {
+      "enabled": ["security", "performance", "quality"],
+      "priorities": {
+        "security": "CRITICAL",
+        "performance": "HIGH",
+        "quality": "MEDIUM"
+      }
+    },
+    "claudeFlow": {
+      "claudeFlowPath": "npx",
+      "claudeFlowPackage": "claude-flow@alpha",
+      "timeout": 30000
+    },
+    "monitoring": {
+      "sampleInterval": 1000,
+      "historySize": 100,
+      "alertThresholds": {
+        "responseTime": 100,
+        "memoryUsage": 500,
+        "errorRate": 0.1
+      }
+    }
+  }
+}
